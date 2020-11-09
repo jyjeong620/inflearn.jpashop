@@ -27,7 +27,7 @@ public class Category {
     
     
     //같은 Entity 내에서 연관관계 설정 하는방법
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_id")
     private Category parent;
     
