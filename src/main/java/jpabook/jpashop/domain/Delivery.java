@@ -5,6 +5,8 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+import static javax.persistence.FetchType.*;
+
 @Getter @Setter
 @Entity
 public class Delivery {
@@ -14,7 +16,7 @@ public class Delivery {
     @Column(name = "delivery_id")
     private Long id;
 
-    @OneToOne(mappedBy = "delivery") // Order.delivery와 매핑
+    @OneToOne(mappedBy = "delivery", fetch = LAZY) // Order.delivery와 매핑
     private Order order;
 
     @Embedded
