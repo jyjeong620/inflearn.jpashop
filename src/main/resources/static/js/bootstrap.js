@@ -602,19 +602,19 @@
     CAROUSEL: 'carousel',
     ACTIVE: 'active',
     SLIDE: 'slide',
-    RIGHT: 'carousel-item-right',
-    LEFT: 'carousel-item-left',
-    NEXT: 'carousel-item-next',
-    PREV: 'carousel-item-prev',
-    ITEM: 'carousel-item',
+    RIGHT: 'carousel-items-right',
+    LEFT: 'carousel-items-left',
+    NEXT: 'carousel-items-next',
+    PREV: 'carousel-items-prev',
+    ITEM: 'carousel-items',
     POINTER_EVENT: 'pointer-event'
   };
   var Selector$2 = {
     ACTIVE: '.active',
-    ACTIVE_ITEM: '.active.carousel-item',
-    ITEM: '.carousel-item',
-    ITEM_IMG: '.carousel-item img',
-    NEXT_PREV: '.carousel-item-next, .carousel-item-prev',
+    ACTIVE_ITEM: '.active.carousel-items',
+    ITEM: '.carousel-items',
+    ITEM_IMG: '.carousel-items img',
+    NEXT_PREV: '.carousel-items-next, .carousel-items-prev',
     INDICATORS: '.carousel-indicators',
     DATA_SLIDE: '[data-slide], [data-slide-to]',
     DATA_RIDE: '[data-ride="carousel"]'
@@ -1552,7 +1552,7 @@
     FORM_CHILD: '.dropdown form',
     MENU: '.dropdown-menu',
     NAVBAR_NAV: '.navbar-nav',
-    VISIBLE_ITEMS: '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)'
+    VISIBLE_ITEMS: '.dropdown-menu .dropdown-items:not(.disabled):not(:disabled)'
   };
   var AttachmentMap = {
     TOP: 'top-start',
@@ -3663,7 +3663,7 @@
     LOAD_DATA_API: "load" + EVENT_KEY$8 + DATA_API_KEY$6
   };
   var ClassName$8 = {
-    DROPDOWN_ITEM: 'dropdown-item',
+    DROPDOWN_ITEM: 'dropdown-items',
     DROPDOWN_MENU: 'dropdown-menu',
     ACTIVE: 'active'
   };
@@ -3672,10 +3672,10 @@
     ACTIVE: '.active',
     NAV_LIST_GROUP: '.nav, .list-group',
     NAV_LINKS: '.nav-link',
-    NAV_ITEMS: '.nav-item',
-    LIST_ITEMS: '.list-group-item',
+    NAV_ITEMS: '.nav-items',
+    LIST_ITEMS: '.list-group-items',
     DROPDOWN: '.dropdown',
-    DROPDOWN_ITEMS: '.dropdown-item',
+    DROPDOWN_ITEMS: '.dropdown-items',
     DROPDOWN_TOGGLE: '.dropdown-toggle'
   };
   var OffsetMethod = {
@@ -3857,7 +3857,7 @@
         $link.addClass(ClassName$8.ACTIVE); // Set triggered links parents as active
         // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
 
-        $link.parents(Selector$8.NAV_LIST_GROUP).prev(Selector$8.NAV_LINKS + ", " + Selector$8.LIST_ITEMS).addClass(ClassName$8.ACTIVE); // Handle special case when .nav-link is inside .nav-item
+        $link.parents(Selector$8.NAV_LIST_GROUP).prev(Selector$8.NAV_LINKS + ", " + Selector$8.LIST_ITEMS).addClass(ClassName$8.ACTIVE); // Handle special case when .nav-link is inside .nav-items
 
         $link.parents(Selector$8.NAV_LIST_GROUP).prev(Selector$8.NAV_ITEMS).children(Selector$8.NAV_LINKS).addClass(ClassName$8.ACTIVE);
       }
