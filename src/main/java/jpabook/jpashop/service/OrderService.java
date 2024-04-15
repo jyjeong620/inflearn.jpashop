@@ -27,8 +27,10 @@ public class OrderService {
     public Long order(Long memberId, Long itemId, int count) {
 
         //엔티티 조회
-        Member member = memberRepository.findOne(memberId);
-        Item item = itemRepository.findOne(itemId);
+        Member member = memberRepository.findById(memberId)
+                .orElseThrow(() -> new IllegalArgumentException("해당 회원이 존재하지 않습니다."));
+        Item item = itemRepository.findById(itemId)
+                .orElseThrow(() -> new IllegalArgumentException("해당 상품이 존재하지 않습니다."));
 
         //배송정보 생성
         Delivery delivery = new Delivery();

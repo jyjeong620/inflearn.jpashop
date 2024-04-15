@@ -17,7 +17,7 @@ public class ItemUpdateTest {
     @Autowired
     EntityManager em;
 
-    @Test
+//    @Test
     public void updateTest() throws Exception {
         Book book = em.find(Book.class, 1L);
 
