@@ -11,10 +11,10 @@ import javax.persistence.EntityManager;
 import javax.swing.*;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+//@SpringBootTest
 public class ItemUpdateTest {
 
-    @Autowired
+//    @Autowired
     EntityManager em;
 
 //    @Test
